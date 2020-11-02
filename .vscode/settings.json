@@ -7,7 +7,6 @@
   "editor.snippetSuggestions": "top",
   "todohighlight.isCaseSensitive": false,
   "todohighlight.isEnable": true,
-  "svgviewer.enableautopreview": true,
   "svgviewer.previewcolumn": "Beside",
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
