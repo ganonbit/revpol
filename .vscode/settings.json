@@ -1,0 +1,22 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "editor.snippetSuggestions": "top",
+  "todohighlight.isCaseSensitive": false,
+  "todohighlight.isEnable": true,
+  "svgviewer.enableautopreview": true,
+  "svgviewer.previewcolumn": "Beside",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "workbench.editor.showTabs": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "diffEditor.ignoreTrimWhitespace": false
+}
