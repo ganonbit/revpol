@@ -9,6 +9,9 @@ const HeaderLayout = ({ children }) => {
       <Flex m='2'>
         <Box>
           <Heading fontSize='2.25rem'>RevPol</Heading>
+          <Heading as='h4' fontSize='1rem'>
+            reverse polish notation made simple.
+          </Heading>
         </Box>
         <Spacer />
         <Box>

@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Input, Text } from '@chakra-ui/core';
+import { Input, Text, Flex } from '@chakra-ui/core';
 
-const Evaluator = ({ setInputArray }) => {
-  const [error, setError] = useState('');
-
+const Evaluator = ({ setInputArray, setError, error }) => {
   useEffect(() => {
+    //TODO: cleanup effect, use yup/formik for validation
     const listener = (event) => {
       if (event.code === 'Enter' || event.code === 'NumpadEnter' || event.keyCode === 13) {
         event.preventDefault();
@@ -28,8 +27,21 @@ const Evaluator = ({ setInputArray }) => {
 
   return (
     <>
-      <Input type='text' name='eval' placeholder='e.g. 5 5 8 + -' focusBorderColor='none' variant='unstyled' />
-      {error && <Text color='red.400'>{error}</Text>}
+      <Flex h='100%' align='center' direction={{ base: 'column', lg: 'row' }}>
+        <Input
+          type='text'
+          name='eval'
+          placeholder='e.g. 5 5 8 + -'
+          variant='unstyled'
+          fontSize='1.5rem'
+          error={error}
+        />
+        {error && (
+          <Text color='red.400' fontSize='1rem' fontFamily='mono'>
+            {error}
+          </Text>
+        )}
+      </Flex>
     </>
   );
 };
