@@ -11,9 +11,10 @@ function rpnEvaluate(seq) {
 
   while (i <= seq.length) {
     let item = seq[i];
+    //TODO: swap nested if for switch case
     if (isNaN(item)) {
       let operandIndex = operands.indexOf(item);
-      if (operandIndex == 0) {
+      if (operandIndex === 0) {
         // pop the stack by removing the last element
         // splice mutates the array
         // let a = parseFloat(stack.splice(-1)[0], 10),
@@ -21,17 +22,18 @@ function rpnEvaluate(seq) {
           b = parseFloat(stack.pop(), 10);
         stack.push(a + b);
       }
-      if (operandIndex == 1) {
+      if (operandIndex === 1) {
         let a = parseFloat(stack.pop(), 10),
           b = parseFloat(stack.pop(), 10);
         stack.push(b - a);
       }
-      if (operandIndex == 2) {
+      if (operandIndex === 2) {
         let a = parseFloat(stack.pop(), 10),
           b = parseFloat(stack.pop(), 10);
         stack.push(a * b);
       }
-      if (operandIndex == 3) {
+      if (operandIndex === 3) {
+        //TODO: track down bug with division that gives infinity
         let a = parseFloat(stack.pop(), 10),
           b = parseFloat(stack.pop(), 10);
         stack.push(b / a);
@@ -47,9 +49,7 @@ function rpnEvaluate(seq) {
 
 export const rpnCalculate = (inputArray, setOutputTotal) => {
   if (inputArray.length > 0) {
-    console.log('inputArray in calc', inputArray);
     let calculatedTotal = rpnEvaluate(inputArray);
-    console.log('calculatedTotal: ', calculatedTotal);
     setOutputTotal(calculatedTotal);
   }
 };

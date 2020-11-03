@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Flex, Text, Box, Spacer } from '@chakra-ui/core';
+import { Flex, Text, Box } from '@chakra-ui/core';
 import { rpnCalculate } from '../../utils';
 
 import { Evaluator } from './Evaluator';

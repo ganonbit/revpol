@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Input, Text, Flex } from '@chakra-ui/core';
 
 const Evaluator = ({ setInputArray, setError, error }) => {
