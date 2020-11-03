@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ChakraProvider } from '@chakra-ui/core';
 import { BrowserRouter } from 'react-router-dom';
 
-import customTheme from './theme/theme';
+import customTheme from './theme';
 import Routes from './Routes';
 import reportWebVitals from './reportWebVitals';
 

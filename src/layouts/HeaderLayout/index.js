@@ -3,11 +3,11 @@ import { Heading, Box, Flex, Spacer, Button } from '@chakra-ui/core';
 
 import { path } from '../../appConstants';
 
-const MainLayout = ({ children }) => {
+const HeaderLayout = ({ children }) => {
   return (
     <>
-      <Flex m='5'>
-        <Box p={2}>
+      <Flex m='2'>
+        <Box>
           <Heading fontSize='2.25rem'>RevPol</Heading>
         </Box>
         <Spacer />
@@ -15,15 +15,11 @@ const MainLayout = ({ children }) => {
           <Link to={path.home}>
             <Button>Home</Button>
           </Link>
-
-          <Link to={path.calculator}>
-            <Button>Calculator</Button>
-          </Link>
         </Box>
       </Flex>
-      <Heading>{children}</Heading>
+      <Heading m='4'>{children}</Heading>
     </>
   );
 };
 
-export default MainLayout;
+export default HeaderLayout;

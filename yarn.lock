@@ -10533,11 +10533,6 @@ rollup@^1.31.1:
     "@types/node" "*"
     acorn "^7.1.0"
 
-rpn-calculator@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/rpn-calculator/-/rpn-calculator-0.0.3.tgz#7bf0c27949d4d6b87fb1889dd7bbaf889fe2d0d2"
-  integrity sha1-e/DCeUnU1rh/sYid17uviJ/i0NI=
-
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"

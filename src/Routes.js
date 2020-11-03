@@ -3,14 +3,12 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { path } from './appConstants';
 
-const Home = lazy(() => import('./pages/Home/Home'));
-const Calculator = lazy(() => import('./pages/Calculator/Calculator'));
+const Home = lazy(() => import('./pages/Home'));
 
 const Routes = () => {
   return (
     <Suspense fallback='routes fallback'>
       <Switch>
-        <Route path={path.calculator} exact render={() => <Calculator />} />
         <Route render={() => <Home />} />
         <Redirect to={path.home} />
       </Switch>
