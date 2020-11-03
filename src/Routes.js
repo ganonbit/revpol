@@ -7,7 +7,8 @@ const Home = lazy(() => import('./pages/Home'));
 
 const Routes = () => {
   return (
-    <Suspense fallback='routes fallback'>
+    //TODO: add spinner/loader from framer-motion
+    <Suspense fallback='Loading...'>
       <Switch>
         <Route render={() => <Home />} />
         <Redirect to={path.home} />
