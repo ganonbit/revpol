@@ -1,1 +1,1 @@
-export { rpnCalculate } from './calc';
+export { rpnCalculate } from './rpnCalculator';

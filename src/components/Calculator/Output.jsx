@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box, Text, Flex, Spacer, Button } from '@chakra-ui/core';
 
 const Output = ({ outputTotal, clearState }) => {
@@ -19,6 +20,11 @@ const Output = ({ outputTotal, clearState }) => {
       </Box>
     </Flex>
   );
+};
+
+Output.propTypes = {
+  clearState: PropTypes.func,
+  outputTotal: PropTypes.string,
 };
 
 export { Output };

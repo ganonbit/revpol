@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 
-import Evaluator from './Evaluator';
+import RpnEvaluator from './RpnEvaluator';
 
-describe('Evaluator', () => {
+describe('RpnEvaluator', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<Evaluator />);
+      render(<RpnEvaluator />);
     }).not.toThrow();
   });
 });

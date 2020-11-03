@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Flex, Text, Box } from '@chakra-ui/core';
+
 import { rpnCalculate } from '../../utils';
 
-import { Evaluator } from './Evaluator';
+import { RpnEvaluator } from './RpnEvaluator';
 import { Output } from './Output';
 import { InputHistory } from './InputHistory';
 
@@ -30,7 +31,7 @@ const Calculator = () => {
           </Text>
         </Box>
         <Box flex='0 1 auto' w='100%' bg='#333' color='#CFCFCF' p='2px 4px' minH={{ base: 'unset', lg: '100px' }}>
-          <Evaluator setInputArray={setInputArray} error={error} setError={setError} />
+          <RpnEvaluator setInputArray={setInputArray} error={error} setError={setError} />
         </Box>
       </Flex>
       {inputArray.length > 0 && (

@@ -1,4 +1,5 @@
 import { Text } from '@chakra-ui/core';
+import { PropTypes } from 'prop-types';
 
 const InputHistory = ({ inputArray }) => {
   const reverseArray = inputArray.slice(0).reverse();
@@ -9,6 +10,10 @@ const InputHistory = ({ inputArray }) => {
       ))}
     </>
   );
+};
+
+InputHistory.propTypes = {
+  inputArray: PropTypes.array,
 };
 
 export { InputHistory };

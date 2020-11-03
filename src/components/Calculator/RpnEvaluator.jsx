@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { Input, Text, Flex } from '@chakra-ui/core';
 
-const Evaluator = ({ setInputArray, setError, error }) => {
+const RpnEvaluator = ({ setInputArray, setError, error }) => {
   useEffect(() => {
-    //TODO: cleanup effect, use yup/formik for validation
+    //TODO: cleanup effect by abstracting out listener(). use yup/formik for validation/errors.
     const listener = (event) => {
       if (event.code === 'Enter' || event.code === 'NumpadEnter' || event.keyCode === 13) {
         event.preventDefault();
@@ -28,14 +29,7 @@ const Evaluator = ({ setInputArray, setError, error }) => {
   return (
     <>
       <Flex h='100%' align='center' direction={{ base: 'column', lg: 'row' }}>
-        <Input
-          type='text'
-          name='eval'
-          placeholder='e.g. 5 5 8 + -'
-          variant='unstyled'
-          fontSize='1.5rem'
-          error={error}
-        />
+        <Input type='text' name='eval' placeholder='e.g. 5 5 8 + -' variant='unstyled' fontSize='1.5rem' />
         {error && (
           <Text color='red.400' fontSize='1rem' fontFamily='mono'>
             {error}
@@ -46,4 +40,10 @@ const Evaluator = ({ setInputArray, setError, error }) => {
   );
 };
 
-export { Evaluator };
+RpnEvaluator.propTypes = {
+  error: PropTypes.string,
+  setError: PropTypes.func,
+  setInputArray: PropTypes.func,
+};
+
+export { RpnEvaluator };

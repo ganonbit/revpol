@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Heading, Box, Flex, Spacer, Button } from '@chakra-ui/core';
 
@@ -23,6 +24,10 @@ const HeaderLayout = ({ children }) => {
       <Heading m='4'>{children}</Heading>
     </>
   );
+};
+
+HeaderLayout.propTypes = {
+  children: PropTypes.any,
 };
 
 export default HeaderLayout;
